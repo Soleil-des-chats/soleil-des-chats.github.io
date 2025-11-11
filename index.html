@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titimousse GitHub Profile</title>
+    <title>Murder Drones GitHub Profile</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
@@ -23,8 +23,8 @@
 
         body {
             font-family: 'JetBrains Mono', monospace;
-            background: #000;
-            color: #00ff41;
+            background: #0a0012;
+            color: #ffd700;
             overflow-x: hidden;
             cursor: crosshair;
             -webkit-overflow-scrolling: touch;
@@ -39,9 +39,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.15;
+            opacity: 0.1;
             z-index: 0;
-            filter: saturate(2) hue-rotate(290deg);
+            filter: saturate(1.5) brightness(0.6);
             pointer-events: none;
         }
 
@@ -53,8 +53,8 @@
             height: 100%;
             background: repeating-linear-gradient(
                 0deg,
-                rgba(0, 0, 0, 0.15),
-                rgba(0, 0, 0, 0.15) 1px,
+                rgba(255, 215, 0, 0.05),
+                rgba(255, 215, 0, 0.05) 1px,
                 transparent 1px,
                 transparent 2px
             );
@@ -94,14 +94,14 @@
         }
 
         .terminal-header {
-            border: 2px solid #ff0055;
+            border: 2px solid #ffd700;
             border-bottom: none;
             padding: 15px 25px;
-            background: rgba(255, 0, 85, 0.05);
+            background: rgba(255, 215, 0, 0.08);
             display: flex;
             align-items: center;
             gap: 20px;
-            box-shadow: 0 0 50px rgba(255, 0, 85, 0.3);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
         }
 
         .terminal-dots {
@@ -113,12 +113,12 @@
             width: 14px;
             height: 14px;
             border-radius: 50%;
-            background: #ff0055;
-            box-shadow: 0 0 10px #ff0055;
+            background: #ffd700;
+            box-shadow: 0 0 10px #ffd700;
         }
 
-        .dot:nth-child(2) { background: #ffdd00; box-shadow: 0 0 10px #ffdd00; }
-        .dot:nth-child(3) { background: #00ff41; box-shadow: 0 0 10px #00ff41; }
+        .dot:nth-child(2) { background: #9d00ff; box-shadow: 0 0 10px #9d00ff; }
+        .dot:nth-child(3) { background: #ff6b00; box-shadow: 0 0 10px #ff6b00; }
 
         .terminal-title {
             font-size: 14px;
@@ -127,31 +127,31 @@
             letter-spacing: 3px;
         }
 
-        .bomb-ascii {
-            font-size: 12px;
-            color: #ff0055;
-            text-shadow: 0 0 20px #ff0055;
-            animation: bombPulse 2s infinite;
+        .drone-ascii {
+            font-size: 20px;
+            color: #ffd700;
+            text-shadow: 0 0 20px #ffd700;
+            animation: dronePulse 2s infinite;
             margin-left: auto;
         }
 
-        @keyframes bombPulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; text-shadow: 0 0 30px #ff0055; }
+        @keyframes dronePulse {
+            0%, 100% { opacity: 1; transform: rotate(0deg); }
+            50% { opacity: 0.7; text-shadow: 0 0 40px #ffd700; transform: rotate(5deg); }
         }
 
         .main-content {
-            border: 2px solid #ff0055;
+            border: 2px solid #ffd700;
             border-top: none;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(10, 0, 18, 0.95);
             padding: 0;
-            box-shadow: 0 0 50px rgba(255, 0, 85, 0.3);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
             min-height: 80vh;
         }
 
         .hero-section {
             padding: 60px 40px;
-            border-bottom: 1px dashed #ff0055;
+            border-bottom: 1px dashed #ffd700;
             position: relative;
             overflow: hidden;
         }
@@ -163,7 +163,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 0, 85, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.15), transparent);
             animation: sweep 3s infinite;
         }
 
@@ -175,7 +175,7 @@
         .glitch-text {
             font-size: 72px;
             font-weight: 700;
-            color: #fff;
+            color: #ffd700;
             text-transform: uppercase;
             letter-spacing: 8px;
             position: relative;
@@ -196,13 +196,13 @@
         .glitch-text::before {
             animation: glitchTop 2s infinite;
             clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-            color: #ff0055;
+            color: #9d00ff;
         }
 
         .glitch-text::after {
             animation: glitchBottom 2.5s infinite;
             clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-            color: #00ff41;
+            color: #ff6b00;
         }
 
         @keyframes glitchTop {
@@ -219,14 +219,14 @@
 
         .status-line {
             font-size: 16px;
-            color: #ffdd00;
+            color: #ff6b00;
             margin-top: 20px;
-            text-shadow: 0 0 10px #ffdd00;
+            text-shadow: 0 0 10px #ff6b00;
         }
 
         .status-line::before {
             content: '> ';
-            color: #ff0055;
+            color: #ffd700;
         }
 
         .readme-wrapper {
@@ -235,7 +235,7 @@
 
         .section-header {
             font-size: 14px;
-            color: #ff0055;
+            color: #ffd700;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -255,65 +255,66 @@
         }
 
         .readme-content {
-            color: #00ff41;
+            color: #ffd700;
             line-height: 2;
             font-size: 14px;
         }
 
         .readme-content h1 {
             font-size: 32px;
-            color: #fff;
+            color: #ffd700;
             text-transform: uppercase;
             margin: 30px 0 15px 0;
-            text-shadow: 0 0 10px #ff0055;
+            text-shadow: 0 0 15px #ffd700;
             letter-spacing: 4px;
         }
 
         .readme-content h2 {
             font-size: 24px;
-            color: #ffdd00;
+            color: #9d00ff;
             margin: 25px 0 12px 0;
-            text-shadow: 0 0 8px #ffdd00;
+            text-shadow: 0 0 10px #9d00ff;
         }
 
         .readme-content h3 {
             font-size: 18px;
-            color: #00ff41;
+            color: #ff6b00;
             margin: 20px 0 10px 0;
+            text-shadow: 0 0 8px #ff6b00;
         }
 
         .readme-content p {
             margin: 15px 0;
-            color: #fff;
+            color: #e0e0e0;
         }
 
         .readme-content a {
-            color: #ff0055;
+            color: #ffd700;
             text-decoration: none;
-            border-bottom: 1px solid #ff0055;
+            border-bottom: 1px solid #ffd700;
             transition: all 0.3s;
         }
 
         .readme-content a:hover {
-            background: #ff0055;
-            color: #000;
-            box-shadow: 0 0 20px #ff0055;
+            background: #ffd700;
+            color: #0a0012;
+            box-shadow: 0 0 20px #ffd700;
         }
 
         .readme-content code {
-            background: rgba(255, 0, 85, 0.2);
+            background: rgba(255, 215, 0, 0.15);
             padding: 3px 8px;
-            border: 1px solid #ff0055;
-            color: #ffdd00;
+            border: 1px solid #ffd700;
+            color: #9d00ff;
         }
 
         .readme-content pre {
-            background: #0a0a0a;
+            background: #050008;
             padding: 20px;
-            border-left: 3px solid #ff0055;
+            border-left: 3px solid #ffd700;
             overflow-x: auto;
             margin: 20px 0;
-            box-shadow: inset 0 0 20px rgba(255, 0, 85, 0.2);
+            box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.1);
         }
 
         .readme-content pre code {
@@ -328,11 +329,11 @@
 
         .readme-content li {
             margin: 10px 0;
-            color: #fff;
+            color: #e0e0e0;
         }
 
         .readme-content li::marker {
-            color: #ff0055;
+            color: #ffd700;
         }
 
         .loading-screen {
@@ -342,8 +343,8 @@
         }
 
         .loading-text {
-            color: #ff0055;
-            text-shadow: 0 0 20px #ff0055;
+            color: #ffd700;
+            text-shadow: 0 0 20px #ffd700;
             animation: loadPulse 1.5s infinite;
         }
 
@@ -355,7 +356,7 @@
         .progress-bar {
             width: 300px;
             height: 3px;
-            background: rgba(255, 0, 85, 0.2);
+            background: rgba(255, 215, 0, 0.2);
             margin: 30px auto;
             position: relative;
             overflow: hidden;
@@ -363,8 +364,8 @@
 
         .progress-fill {
             height: 100%;
-            background: #ff0055;
-            box-shadow: 0 0 10px #ff0055;
+            background: #ffd700;
+            box-shadow: 0 0 10px #ffd700;
             animation: progress 2s infinite;
         }
 
@@ -380,13 +381,13 @@
 
         .error-title {
             font-size: 48px;
-            color: #ff0055;
-            text-shadow: 0 0 30px #ff0055;
+            color: #ffd700;
+            text-shadow: 0 0 30px #ffd700;
             margin-bottom: 20px;
         }
 
         .error-msg {
-            color: #fff;
+            color: #e0e0e0;
             font-size: 14px;
             line-height: 1.8;
         }
@@ -395,11 +396,11 @@
             position: fixed;
             width: 6px;
             height: 6px;
-            background: #ff0055;
+            background: #ffd700;
             border-radius: 50%;
             pointer-events: none;
             z-index: 9997;
-            box-shadow: 0 0 10px #ff0055;
+            box-shadow: 0 0 10px #ffd700;
             animation: fade 0.5s forwards;
         }
 
@@ -411,7 +412,7 @@
             position: fixed;
             width: 4px;
             height: 4px;
-            background: #ff0055;
+            background: #ffd700;
             pointer-events: none;
             z-index: 9997;
             animation: explodeParticle 1s forwards;
@@ -429,11 +430,11 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.95);
-            border-top: 2px solid #ff0055;
+            background: rgba(10, 0, 18, 0.98);
+            border-top: 2px solid #ffd700;
             padding: 15px 20px;
             z-index: 10000;
-            box-shadow: 0 -5px 50px rgba(255, 0, 85, 0.4);
+            box-shadow: 0 -5px 50px rgba(255, 215, 0, 0.4);
             backdrop-filter: blur(10px);
         }
 
@@ -452,7 +453,7 @@
 
         .track-title {
             font-size: 12px;
-            color: #fff;
+            color: #ffd700;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 8px;
@@ -464,8 +465,8 @@
         .waveform-container {
             position: relative;
             height: 30px;
-            background: rgba(255, 0, 85, 0.1);
-            border: 1px solid #ff0055;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid #ffd700;
             overflow: hidden;
         }
 
@@ -479,9 +480,9 @@
 
         .bar {
             width: 3px;
-            background: #ff0055;
+            background: #ffd700;
             border-radius: 2px;
-            box-shadow: 0 0 5px #ff0055;
+            box-shadow: 0 0 5px #ffd700;
             transition: height 0.1s;
         }
 
@@ -493,8 +494,8 @@
 
         .control-btn {
             background: none;
-            border: 2px solid #ff0055;
-            color: #ff0055;
+            border: 2px solid #ffd700;
+            color: #ffd700;
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -504,25 +505,25 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s;
-            box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
 
         .control-btn:hover {
-            background: #ff0055;
-            color: #000;
-            box-shadow: 0 0 25px #ff0055;
+            background: #ffd700;
+            color: #0a0012;
+            box-shadow: 0 0 25px #ffd700;
             transform: scale(1.1);
         }
 
         .control-btn.active {
-            background: #ff0055;
-            color: #000;
+            background: #ffd700;
+            color: #0a0012;
         }
 
         .time-display {
             font-size: 11px;
-            color: #ffdd00;
-            text-shadow: 0 0 5px #ffdd00;
+            color: #9d00ff;
+            text-shadow: 0 0 5px #9d00ff;
             min-width: 90px;
             text-align: center;
         }
@@ -534,15 +535,15 @@
         }
 
         .volume-icon {
-            color: #00ff41;
+            color: #ff6b00;
             font-size: 16px;
-            text-shadow: 0 0 10px #00ff41;
+            text-shadow: 0 0 10px #ff6b00;
         }
 
         .volume-slider {
             width: 80px;
             height: 3px;
-            background: rgba(0, 255, 65, 0.2);
+            background: rgba(255, 107, 0, 0.2);
             border-radius: 2px;
             position: relative;
             cursor: pointer;
@@ -550,8 +551,8 @@
 
         .volume-fill {
             height: 100%;
-            background: #00ff41;
-            box-shadow: 0 0 10px #00ff41;
+            background: #ff6b00;
+            box-shadow: 0 0 10px #ff6b00;
             border-radius: 2px;
             transition: width 0.1s;
         }
@@ -601,21 +602,21 @@
                 <div class="dot"></div>
                 <div class="dot"></div>
             </div>
-            <div class="terminal-title">System: ARMED</div>
-            <div class="bomb-ascii">💣 [LIVE]</div>
+            <div class="terminal-title">DISASSEMBLY DRONE ACTIVE</div>
+            <div class="drone-ascii">🤖 [ONLINE]</div>
         </div>
 
         <div class="main-content">
             <div class="hero-section">
                 <h1 class="glitch-text" data-text="TITIMOUSSE">TITIMOUSSE</h1>
-                <div class="status-line">INITIALIZING DETONATION...</div>
+                <div class="status-line">SERIAL DESIGNATION: LOADING...</div>
             </div>
 
             <div class="readme-wrapper">
-                <div class="section-header">README.PAYLOAD</div>
+                <div class="section-header">DATA_LOG.MD</div>
                 <div id="readme-container">
                     <div class="loading-screen">
-                        <div class="loading-text">[█████ LOADING DATA █████]</div>
+                        <div class="loading-text">[█████ ACCESSING WORKER DRONE FILES █████]</div>
                         <div class="progress-bar">
                             <div class="progress-fill"></div>
                         </div>
@@ -630,7 +631,7 @@
         <div class="player-container">
             
             <div class="track-info">
-                <div class="track-title">// IRIS_OUT.MP3</div>
+                <div class="track-title">// DRONE_TRANSMISSION.MP3</div>
                 <div class="waveform-container">
                     <div class="waveform" id="waveform"></div>
                 </div>
@@ -669,7 +670,7 @@
                 (e.ctrlKey && e.key.toUpperCase() === 'U')
             ) {
                 e.preventDefault();
-                alert('Access Denied.');
+                alert('Access Denied - Worker Drone Authorization Required');
             }
         });
 
@@ -717,12 +718,13 @@
             } catch (error) {
                 container.innerHTML = `
                     <div class="error-screen">
-                        <div class="error-title">// ERROR 404 //</div>
+                        <div class="error-title">// CRITICAL ERROR //</div>
                         <div class="error-msg">
-                            PAYLOAD NOT FOUND<br><br>
-                            → Replace 'YOUR_USERNAME' with your GitHub username<br>
+                            WORKER DRONE DATA CORRUPTED<br><br>
+                            → Replace 'soleil-des-chats' with your GitHub username<br>
                             → Ensure you have a README.md in your profile repo<br>
-                            → Repository format: username/username
+                            → Repository format: username/username<br><br>
+                            [DISASSEMBLY PROTOCOL PENDING]
                         </div>
                     </div>
                 `;
